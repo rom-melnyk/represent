@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  background-color: hsl(210, 30%, 80%);
+  color: hsl(210, 70%, 15%);
+
+  font-family: sans-serif;
+  font-size: 2.5vh;
+  font-weight: normal;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0 .25em;
+  font-weight: normal;
+}
+
+h1 { font-size: 2.50em; }
+h2 { font-size: 2.00em; }
+h3 { font-size: 1.75em; }
+h4 { font-size: 1.50em; }
+h5 { font-size: 1.25em; }
+h6 { font-size: 1.10em; }
+
+
+/* -------------------------- header -------------------------- */
+body > header {
+  position: absolute;
+  width: 100%;
+  height: 25vh;
+  top: 0;
+  left: 0;
+  padding: 0 2em;
+  background-color: hsla(210, 30%, 80%, 0);
+  transition: background-color 150ms linear;
+}
+body > header:hover { background-color: hsla(210, 30%, 80%, 1); }
+
+
+body > header > h1 {
+  margin-top: -6em;
+  transition: margin 150ms linear;
+}
+body > header:hover > h1 { margin-top: 1em; }
+
+
+body > header > h2 {
+  margin-top: 0;
+}
+
+
+
+/* -------------------------- controls elements -------------------------- */
+body > .controls {
+  position: absolute;
+  width: 15vw;
+  height: 60vh;
+  top: 25vh;
+
+  cursor: pointer;
+}
+
+
+body > .controls.left { left: 0; }
+body > .controls.right { right: 0; }
+
+body > .controls.left::after, body > .controls.right::after {
+  display: inline-block;
+  width: 100%;
+  font-size: 2em;
+  line-height: 60vh;
+  vertical-align: middle;
+  text-align: center;
+  transition: margin 150ms linear;
+}
+
+
+body > .controls.left::after {
+  margin-left: -100%;
+  content: "<";
+}
+body > .controls.left:hover::after { margin-left: 0; }
+
+body > .controls.right::after {
+  margin-left: 100%;
+  content: ">";
+}
+body > .controls.right:hover::after { margin-left: 0; }
+
+
+/* -------------------------- footer -------------------------- */
+body > footer {
+  position: absolute;
+  width: 100%;
+  height: 15vh;
+  bottom: 0;
+  left: 0;
+
+  padding: 1em 1em 0;
+}
+
+
+body > footer > .pagination {
+  margin-top: 6em;
+  opacity: 0;
+  white-space: nowrap;
+  transition: margin 150ms linear, opacity 150ms linear;
+}
+body > footer:hover > .pagination { margin-top: 0; opacity: 1; }
+
+
+body > footer .page {
+  display: inline-block;
+  padding: 0 .75em;
+  margin-right: .5em;
+  line-height: 2em;
+  vertical-align: middle;
+
+  cursor: pointer;
+  border-radius: .25em;
+  border: 1px solid hsl(210, 30%, 80%);
+  transition: background-color 150ms linear;
+}
+body > footer .page:hover {
+  background-color: hsl(210, 30%, 60%);
+}
+
+body > footer .page.current {
+  cursor: default;
+  background-color: hsl(210, 30%, 60%);
+}
+
+
+body > footer > .credits {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+
+  padding: .25rem 2rem;
+  font-size: .75em;
+  text-align: center;
+
+  opacity: 0;
+  transition: opacity 150ms linear;
+}
+body > footer:hover > .credits { opacity: 1; }
+
+
+/* -------------------------- payload -------------------------- */
+.payload {
+  padding: 2em;
+}
