@@ -1,0 +1,12 @@
+@import "_config";
+
+
+.slides {
+  width: 100%;
+  height: 100%;
+  padding: $gap-big;
+
+  & > .slide > h1:first-child {
+    margin-top: calc(1em - 2rem);
+  }
+}

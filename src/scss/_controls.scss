@@ -1,0 +1,47 @@
+@import "_config";
+
+
+body > .controls {
+  position: absolute;
+  width: $control-width;
+  height: 100vh - $header-height - $footer-height;
+  top: $header-height;
+
+  cursor: pointer;
+
+
+  &.left::after, &.right::after {
+    display: inline-block;
+    width: 100%;
+
+    line-height: 60vh;
+    font-size: $gap-big;
+    vertical-align: middle;
+    text-align: center;
+
+    transition: margin $transition-params;
+  }
+
+  &.left {
+    left: 0;
+
+    &::after {
+      margin-left: -100%;
+      content: "\u2190";
+    }
+
+    &:hover::after { margin-left: 0; }
+  }
+
+  &.right {
+    right: 0;
+
+    &::after {
+      margin-left: 100%;
+      content: "\u2192";
+    }
+
+    &:hover::after { margin-left: 0; }
+  }
+
+}

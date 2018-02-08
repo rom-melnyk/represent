@@ -1,0 +1,20 @@
+@import "_config";
+
+
+.button {
+  display: inline-block;
+  padding: 0 .75em;
+  margin-right: .5em;
+
+  line-height: $gap-big;
+  vertical-align: middle;
+
+  cursor: pointer;
+  border-radius: $gap-xx-small;
+  border: 1px solid $color-xx-light;
+  transition: background-color $transition-params;
+
+  &:last-child { margin-right: 0; }
+
+  &:hover { background-color: $color-x-light; }
+}

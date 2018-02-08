@@ -1,0 +1,62 @@
+@import "_config";
+@import "_interactives";
+
+
+body > footer {
+  position: absolute;
+  width: 100%;
+  height: $footer-height;
+  bottom: 0;
+  left: 0;
+
+  padding: $gap-medium $gap-medium 0;
+
+  opacity: 0;
+  transition: opacity $transition-params;
+
+
+  & > .pagination {
+    margin-top: 6em;
+    opacity: 0;
+    white-space: nowrap;
+    transition: margin $transition-params;
+
+    & .page {
+      @extend .button;
+
+      &.current {
+        cursor: default;
+        background-color: $color-x-light;
+      }
+    }
+  }
+
+
+  & > .credits {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+    padding: .25rem 2rem;
+    font-size: .75em;
+    text-align: center;
+
+    color: white;
+    background-color: $color-x-light;
+    opacity: 0;
+    transition: opacity $transition-params;
+  }
+
+
+  &:hover {
+    opacity: 1;
+
+    & > .pagination {
+      margin-top: 0;
+      opacity: 1;
+    }
+
+    & > .credits { opacity: 1; }
+  }
+}

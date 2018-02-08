@@ -6,7 +6,4 @@ npm-debug.log
 package-lock.json
 
 *.map
-static/css/*.css
-static/js/*.js
-static/gfx/uploaded/
-
+script.js

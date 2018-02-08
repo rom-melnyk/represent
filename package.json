@@ -1,0 +1,49 @@
+{
+  "name": "represent",
+  "version": "1.0.0",
+  "description": "Presentation engine",
+  "main": "script.js",
+  "scripts": {
+    "cleanup": "rm -fr script.js *.map",
+    "dev": "npm run cleanup && webpack --watch",
+    "prod": "npm run cleanup && webpack --env.PROD=true --progress",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "presentation",
+    "es6",
+    "js",
+    "webpack",
+    "html",
+    "css",
+    "scss"
+  ],
+  "contributors": [
+    "Roman Melnyk <email.rom.melnyk@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rom-melnyk/represent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rom-melnyk/represent/issues",
+    "email": "email.rom.melnyk@gmail.com"
+  },
+  "license": "ISC",
+  "private": true,
+  "homepage": "https://github.com/rom-melnyk/represent#readme",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babili-webpack-plugin": "^0.1.2",
+    "css-loader": "^0.28.4",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.3.0"
+  },
+  "dependencies": {},
+  "babel": {
+    "plugins": []
+  }
+}

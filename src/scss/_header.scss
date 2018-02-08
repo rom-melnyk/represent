@@ -1,0 +1,32 @@
+@import "_config";
+
+
+body > header {
+  position: absolute;
+  width: 100%;
+  height: $header-height;
+  top: 0;
+  left: 0;
+  padding: 0 $gap-big;
+  background-color: transparent;
+  opacity: 0;
+  transition: background-color $transition-params, opacity $transition-params;
+
+
+  & > h1 {
+    margin-top: -6em;
+    transition: margin $transition-params;
+  }
+
+  & > h2 {
+    margin-top: 0;
+  }
+
+
+  &:hover {
+    opacity: 1;
+    background-color: $color-xx-light;
+
+    & > h1 { margin-top: $gap-medium; }
+  }
+}
