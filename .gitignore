@@ -1,0 +1,12 @@
+.idea/
+.vscode/
+
+node_modules/
+npm-debug.log
+package-lock.json
+
+*.map
+static/css/*.css
+static/js/*.js
+static/gfx/uploaded/
+
