@@ -15,30 +15,32 @@ body > .controls {
     width: 100%;
 
     line-height: 60vh;
-    font-size: $gap-big;
+    font-size: 2 * $gap-big;
     vertical-align: middle;
     text-align: center;
 
     transition: margin $transition-params;
   }
 
+
   &.left {
     left: 0;
 
     &::after {
       margin-left: -100%;
-      content: "\u2190";
+      content: "\02190";
     }
 
     &:hover::after { margin-left: 0; }
   }
+
 
   &.right {
     right: 0;
 
     &::after {
       margin-left: 100%;
-      content: "\u2192";
+      content: "\02192";
     }
 
     &:hover::after { margin-left: 0; }
