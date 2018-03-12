@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<slides>
+    <slide>
+        <h1>Slide one</h1>
+        <article>Lorem ipsum</article>
+    </slide>
+    <slide>
+        <h1>Slide two</h1>
+        <article>Lorem ipsum</article>
+    </slide>
+    <slide>
+        <h1>Slide three</h1>
+        <article>Lorem ipsum</article>
+    </slide>
+    <slide>
+        <h1>Slide four</h1>
+        <article>Lorem ipsum</article>
+    </slide>
+</slides>
